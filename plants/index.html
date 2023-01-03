@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="container">
+        <div >
+            <a>
+                <img src="./img/logo_vector.svg" alt="Plants logo">
+                <span>Plants</span>
+            </a>
+            <div class="navigation__wrapper">
+                <ul class="navigation__list navigation__list_closed">
+                    <li class="navigation__item">
+                        <a class="navigation__link navigation__link_active" href="#Home">Home</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#About">About us</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#Service">Service</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#Price">Price</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#Contacts">Contacts</a>
+                    </li>
+                </ul>
+                <button class="navigation__button navigation__button_closed" type="button">Menu</button>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <section class="welcome">
+            <img src="./img/leafs.jpg" alt="Leafs">
+            <div class="welcome__content">
+                <h1 class="welcome__header">We grow <span>plants</span> and give you oxygen</h1>
+                <p class="welcome__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                <button type="button" class="welcome__link">Learn more</button>
+            </div>
+        </section>
+        <section class="about">
+            <img src="./img/houseplant 1.jpg" alt="houseplant 1">
+            <div class="about__content">
+                <h2 class="about__header">We are <span>professional experienced</span> gardeners</h2>
+                <p class="about__content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                </p>
+            </div>
+        </section>
+        <section class="service">
+            <div class="servise__top">
+                <h2 class="service__header">Service and our projects</h2>
+                <div class="service__buttons">
+                    <button type="button" class="service__button">Gardens</button>
+                    <button type="button" class="service__button">Lawn</button>
+                    <button type="button" class="service__button">Planting</button>
+                </div>
+            </div>
+            <ul class="service__list">
+                <li class="service__item">
+                    <img src="./img/first.jpg" alt="Garden care" class="service__img">
+                    <div class="service__item-content">
+                        <h3 class="service__item-header">Garden care</h3>
+                        <span class="service__item-text">Lorem Ipsum has been the industry</span>
+                    </div>
+                </li>
+                <li class="service__item">
+                    <img src="./img/first (1).jpg" alt="Garden care" class="service__img">
+                    <div class="service__item-content">
+                        <h3 class="service__item-header">Garden care</h3>
+                        <span class="service__item-text">Lorem Ipsum has been the industry</span>
+                    </div>
+                </li>
+                <li class="service__item">
+                    <img src="./img/first (2).jpg" alt="Garden care" class="service__img">
+                    <div class="service__item-content">
+                        <h3 class="service__item-header">Garden care</h3>
+                        <span class="service__item-text">Lorem Ipsum has been the industry</span>
+                    </div>
+                </li>
+                <li class="service__item">
+                    <img src="./img/first (3).jpg" alt="Garden care" class="service__img">
+                    <div class="service__item-content">
+                        <h3 class="service__item-header">Garden care</h3>
+                        <span class="service__item-text">Lorem Ipsum has been the industry</span>
+                    </div>
+                </li>
+                <li class="service__item">
+                    <img src="./img/first (4).jpg" alt="Garden care" class="service__img">
+                    <div class="service__item-content">
+                        <h3 class="service__item-header">Garden care</h3>
+                        <span class="service__item-text">Lorem Ipsum has been the industry</span>
+                    </div>
+                </li>
+                <li class="service__item">
+                    <img src="./img/first (5).jpg" alt="Garden care" class="service__img">
+                    <div class="service__item-content">
+                        <h3 class="service__item-header">Garden care</h3>
+                        <span class="service__item-text">Lorem Ipsum has been the industry</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="prices">
+            <div class="prices__content">
+                <h1 class="prices__header">Prices</h1>
+                    <ul class="prices__list">
+                        <li class="prices__item">
+                            <a href="#" class="prices__link">Basics</a> 
+                        </li>
+                        <li class="prices__item">
+                            <a href="#" class="prices__link">Standard</a> 
+                        </li>
+                        <li class="prices__item">
+                            <a href="#" class="prices__link">Pro care</a> 
+                        </li>
+                    </ul>
+            </div>
+            <div class="prices__content">
+                <p class="price__text">
+                    Our best gardeners are ready to help you
+                </p>
+                <button type="button" class="prices__button">
+                    Contact us
+                </button>
+            </div>
+        </section>
+        <section class="contacts">
+            <h2 class="contacts__header">Contact us</h2>
+            <select name="city" id="city" class="contacs__select">
+                <option disabled>City</option>
+                <option value="London">London</option>
+                <option value="Nottingham"></option>
+            </select>
+        </section>
+    </main>
+    <footer>
+        <div class="footer__wrapper">
+            <span class="footer__copyright">2022</span>
+            <a href="https://github.com/GaliyaZ" class="footer__link footer__link_github">github</a>
+        </div>
+        <a href="https://rs.school/js-stage0/" class="footer__link">Rolling Scopes School</a>
+        <ul class="footer__list">
+            <li class="footer__item_instagram">
+                <a href="" class="footer__link"></a>
+            </li>
+            <li class="footer__item_facebook">
+                <a href="" class="footer__link"></a>
+            </li>
+            <li class="footer__item_twitter">
+                <a href="" class="footer__link"></a>
+            </li>
+            <li class="footer__item_pinterest">
+                <a href="" class="footer__link"></a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
