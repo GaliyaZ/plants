@@ -37,16 +37,20 @@ body {
 }
 
 .logo__link {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     width: 66px;
     height: 21px;
+    margin-bottom: 3px;
 }
 
 .logo__img {
     width: 20px;
     height: 20px;
+    margin-bottom: 2px;
+    margin-right: 2px;
 }
 
 .logo__text {
@@ -67,6 +71,7 @@ body {
 .navigation__link {
     color: #010201;
     font-family: 'Inika';
+    font-weight: 400;
     font-size: 16px;
     text-decoration: none;
 }
@@ -90,8 +95,8 @@ body {
 .welcome {
     background-image: url('./img/leafs.png');
     background-repeat: no-repeat;
-    background-position: 0% 50%;
-    background-size: 449px 407px;
+    background-position: -1% 51%;
+    background-size: 462px 424px;
     box-sizing: border-box;
     min-height: 532px;
     display: flex;
@@ -101,14 +106,15 @@ body {
 }
 
 .welcome__content {
-    width: 40%;
+    width: 549px;
 }
 
 .welcome__header {
     font-family: 'Inter';
     font-weight: 700px;
     font-size: 45px;
-    margin: 5px 0 42px 0;
+    line-height: 50px;
+    margin: 5px 0 45px 0;
 }
 
 .welcome__header_accent {
@@ -129,6 +135,7 @@ body {
     width: 158px;
     height: 44px;
     text-transform: uppercase;
+    font-family: 'Inter';
     font-size: 16px;
     border: 2px solid #E06733;
     border-radius: 10px;
@@ -138,7 +145,7 @@ body {
 .about {
     background-image: url('./img/houseplant1.png');
     background-repeat: no-repeat;
-    background-position: 100% 50%;
+    background-position: 100% 48%;
     background-size: 464px 479px;
     box-sizing: border-box;
     min-height: 666px;
@@ -149,7 +156,7 @@ body {
 }
 
 .about__content {
-    width: 42%;
+    width: 50%;
 }
 
 .about__header {
@@ -159,7 +166,7 @@ body {
     line-height: 52px;
     color: #499A18;
     width: 80%;
-    margin-top: 68px;
+    margin-top: 20px;
     margin-bottom: 40px;
 }
 
@@ -177,15 +184,16 @@ body {
 
 .service {
     box-sizing: border-box;
-    margin: 40px 0 121px 0;
+    margin: 0;
     min-height: 1300px;
+    padding: 40px 0 120px 0;
 }
 
 .service__header {
     font-family: 'Inika', serif;
     font-weight: 400;
     font-size: 40px;
-    line-height: 52px;
+    line-height: 52.12px;
     color: #499A18;
     margin: 0;
 }
@@ -198,16 +206,17 @@ body {
 }
 
 .service__button {
-    font-family: 'Inika', serif;
+    font-family: 'Inika';
     font-weight: 400;
     font-size: 20px;
+    line-height: 26px;
     color: #E06733;
     box-sizing: border-box;
     width: 161px;
     height: 50px;
-    font-size: 16px;
+    font-size: 20px;
     border: 1px solid #E06733;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: transparent;
     margin-right: 38px;
 }
@@ -225,7 +234,7 @@ body {
     column-gap: 116px;
     row-gap: 55px;
     padding: 0;
-    margin: 90px 0 0 0;
+    margin: 77px 0 0 0;
 }
 
 .service__item {
@@ -253,7 +262,7 @@ body {
     font-size: 20px;
     line-height: 22px;
     color: #E06733;
-    margin: 10px 0 10px 0;
+    margin: 8px 0 12px 0;
     text-align: center;
 }
 
@@ -270,14 +279,14 @@ body {
 .prices {
     background-image: url(./img/leafs\(1\).png);
     background-repeat: no-repeat;
-    background-size: 152px 175px;
-    background-position: 100% 70%;
+    background-size: 166px 187px;
+    background-position: 101% 70%;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 318px;
-    min-height: 560px;
-    padding: 40px 0 128px 0;
+    min-height: 555px;
+    padding: 35px 0 90px 0;
 }
 
 .prices__content {
@@ -357,19 +366,19 @@ body {
     color: #499A18;
 }
 
-.prices__button {
-    font-family: 'Inika', serif;
+.prices__content_right .prices__button {
+    font-family: 'Inika';
     font-weight: 400;
     font-size: 20px;
+    line-height: 26px;
     color: #E06733;
     box-sizing: border-box;
     width: 162px;
     height: 50px;
-    font-size: 16px;
     border: 1px solid #E06733;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: transparent;
-    margin: 38px 0 0 0;
+    margin: 40px 0 0 0;
 }
 
 .prices__content_right {
@@ -448,8 +457,24 @@ body {
     align-items: center;
     justify-content: space-between;
     font-family: 'Inter', 'Tahoma', serif;
+    font-size: 20px;
+    line-height: 50px;
     color: #000000;
     min-height: 130px;
+}
+
+.copyright__wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer__copyright {
+    margin-right: 20px;
+}
+
+.footer__copyright_year {
+    font-style: normal;
+    margin-right: 20px;
 }
 
 .footer__wrapper a, .footer__wrapper a:visited {
@@ -468,6 +493,10 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.footer__link_rs {
+    padding: 0 0 0 15px;
 }
 
 .footer__list {
