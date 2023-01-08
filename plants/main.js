@@ -41,3 +41,4 @@ function toggleClasses() {
     menuList.classList.toggle('navigation__list_closed');
     menuList.classList.toggle('navigation__list_opened');
 }
+console.log(80)
