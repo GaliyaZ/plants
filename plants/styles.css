@@ -26,6 +26,19 @@ body {
     width: 100%;
 }
 
+.blur {
+    filter: blur(2px);
+    animation-name: blur;
+    animation-duration: 2s;
+}
+
+@keyframes blur {
+    from {
+        filter: blur(0);
+    }
+    to {filter: blur(2px);}
+}
+
 .background__dark {
     background-color: #EDF2EC;
 }
@@ -242,6 +255,28 @@ header {
     border-radius: 5px;
     background-color: transparent;
     margin-right: 38px;
+}
+.service__button:disabled {
+    background-color: #EDF2EC;
+    border-color: #636060;
+    color: #636060;
+}
+.service__button_active {
+    cursor: pointer;
+    background-color: #E06733;
+    color: #ffffff;
+    animation-name: active_btn;
+    animation-duration: 2s;
+}
+@keyframes active_btn {
+    from {
+        background-color: transparent;
+        color: #E06733;
+    }
+    to {
+        background-color: #E06733;
+        color: #ffffff;
+    }
 }
 
 .servise__top {
