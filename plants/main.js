@@ -12,8 +12,9 @@ const serviceGardens = document.querySelectorAll('.garden');
 const serviceLawns = document.querySelectorAll('.lawn');
 const servicePlantings = document.querySelectorAll('.planting');
 let secviceActiveLinks = document.querySelectorAll('.service__button_active');
+const priceItems = document.querySelectorAll('.prices__item');
+const drops = document.querySelectorAll('.prices__decor');
 
-// let indexes = [];
 
 // menu
 menuBtn.addEventListener('click', () => {
@@ -27,10 +28,14 @@ menuItems.forEach(item => {
     })
 })
 
-serviceBtns.forEach((item, index) => {
+drops.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        priceItems[index].classList.toggle('prices__item_active');
+        deactivateLink(priceItems, index, 'prices__item_active');
+    })
+})
 
-    
-    
+serviceBtns.forEach((item, index) => {
     item.addEventListener('click', () => {
         
         item.classList.toggle('service__button_active');
@@ -81,7 +86,7 @@ serviceBtns.forEach((item, index) => {
 menuLinks.forEach((item, index) => {
     item.addEventListener('click', () => {
         item.classList.toggle('navigation__link_active');
-        deactivateLink(menuLinks, index)
+        deactivateLink(menuLinks, index, 'navigation__link_active')
     })
 
 })
