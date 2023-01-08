@@ -14,7 +14,26 @@ const servicePlantings = document.querySelectorAll('.planting');
 let secviceActiveLinks = document.querySelectorAll('.service__button_active');
 const priceItems = document.querySelectorAll('.prices__item');
 const drops = document.querySelectorAll('.prices__decor');
+const selectCustom = document.querySelector('.contacts__select-custom');
+const selectTag = selectCustom.querySelector('select');
 
+function selectCustomization () {
+    let options = document.createElement('div');
+    options.setAttribute("class", 'contacts__options');
+    for (let i = 0; i < selectTag.options.length; i++) {
+        let option = document.createElement('div');
+        option.setAttribute("class", 'contacts__option');
+        option.innerHTML = selectTag.options[i].innerHTML;
+        options.appendChild(option);
+    }
+    selectCustom.appendChild(options);
+}
+selectCustomization ();
+selectCustom.addEventListener('click', () => {
+    selectCustom.classList.toggle('contacts__select-custom_active');
+    
+
+})
 
 // menu
 menuBtn.addEventListener('click', () => {
