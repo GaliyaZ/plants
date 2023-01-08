@@ -38,7 +38,46 @@ body {
     }
     to {filter: blur(2px);}
 }
-
+.box {
+    display: none;
+}
+.box__active {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 448px;
+    margin: 47px 0 0 auto;
+    background: #EDF2EC;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding: 17px 33px 32px 33px;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+.addres__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    column-gap: 20px;
+}
+.addres__city_det {
+    color: #717171;
+    font-weight: 400;
+}
+.call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 122px;
+    height: 26px;
+    border: 1px solid #E06733;
+    border-radius: 5px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-top: 24px;
+}
 .background__dark {
     background-color: #EDF2EC;
 }
@@ -670,6 +709,9 @@ hr {
 }
 
 @media (max-width: 1200px) and (min-width: 768px) {
+    .box__active {
+            margin: 47px  auto 0 auto;
+    }
     .container {
         max-width: 768px;
         padding: 0 50px;
@@ -808,7 +850,8 @@ hr {
         margin-top: 30px;
         margin-left: auto;
     }
-    
+
+
     .contacts {
         padding: 40px 0;
         min-height: 739px;
@@ -837,6 +880,19 @@ hr {
 }
 
 @media (max-width: 767px) {
+    .box__active {
+        margin: 47px  auto 0 auto;
+        width: 300px;
+        padding: 10px 15px 10px 15px;
+        font-size: 10px;
+        line-height: 15px;
+        letter-spacing: 0;
+    }
+    .call {
+        width: 70px;
+        height: 20px;
+        margin-top: 10px;
+    }
     header {
         position: sticky;
         top: 0;
@@ -1160,3 +1216,4 @@ hr {
 .contacts__select-custom_active::before {
     transform: rotate(-135deg);
 }
+

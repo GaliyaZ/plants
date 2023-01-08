@@ -16,6 +16,12 @@ const priceItems = document.querySelectorAll('.prices__item');
 const drops = document.querySelectorAll('.prices__decor');
 const selectCustom = document.querySelector('.contacts__select-custom');
 const selectTag = selectCustom.querySelector('select');
+let optionsList = [];
+const options = [];
+let city = document.querySelector('.addres__city_name');
+        let phone = document.querySelector('.addres__phone_num');
+        let addres = document.querySelector('.addres__addres_name');
+        const box = document.querySelector('.box');
 
 function selectCustomization () {
     let options = document.createElement('div');
@@ -27,12 +33,40 @@ function selectCustomization () {
         options.appendChild(option);
     }
     selectCustom.appendChild(options);
+    optionsList = document.querySelectorAll('.contacts__option');
 }
 selectCustomization ();
+
+const vocabulary = {
+    'Canandaigua, NY': {
+        Phone: '+1 585	393 0001',
+        adress: '151 Charlotte Street'
+    },
+    'New York City': {
+        Phone: '+1 212	456 0002',
+        adress: '9 East 91st Street'
+    },
+    'Sherrill, NY': {
+        Phone: '+1 315	908 0004',
+        adress: '14 WEST Noyes BLVD'
+    },
+    'New York City': {
+        Phone: '+1 914	678 0003',
+        adress: '511 Warburton Ave'
+    }
+}
 selectCustom.addEventListener('click', () => {
     selectCustom.classList.toggle('contacts__select-custom_active');
-    
+})
 
+optionsList.forEach(item => {
+    item.addEventListener('click', () => {
+        const val = item.innerHTML;
+        city.innerHTML = val;
+        phone.innerHTML = vocabulary[val].Phone;
+        addres.innerHTML = vocabulary[val].adress;
+        box.classList.add('box__active')
+    })
 })
 
 // menu
