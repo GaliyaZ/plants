@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header class="background background__dark">
+    <header class="background background__dark header__background">
         <div class="container">
             <div class="header">
                 <a class="logo__link">
@@ -43,19 +43,19 @@
     </header>
     <main class="background background__dark">
         <div class="container">
-            <section class="welcome">
+            <section class="welcome" id="Home">
                 <div class="welcome__content">
                     <h1 class="welcome__header">We grow <span class="welcome__header_accent">plants</span> and give you
                         oxygen</h1>
                     <p class="welcome__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the <br>industry's standard dummy text ever since the 1500s.</p>
-                    <button type="button" class="welcome__link">Learn more</button>
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    <a type="button" class="welcome__link">Learn more</a>
                 </div>
             </section>
         </div>
         <div class="background background__light">
             <div class="container">
-                <section class="about">
+                <section class="about" id="About">
                     <div class="about__content">
                         <h2 class="about__header">We are <span class="about__header about__header_accent">professional
                                 experienced</span> gardeners</h2>
@@ -74,7 +74,7 @@
             </div>
         </div>
         <div class="container">
-            <section class="service">
+            <section class="service" id="Service">
                 <div class="servise__top">
                     <h2 class="service__header">Service and our projects</h2>
                     <div class="service__buttons">
@@ -84,43 +84,67 @@
                     </div>
                 </div>
                 <ul class="service__list">
-                    <li class="service__item">
-                        <img src="./img/first.jpg" alt="Garden care" class="service__img">
+                    <li class="service__item garden">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./img/first.jpg">
+                            <source media="(min-width: 380px)" srcset="./img/tablet-first.jpg">
+                            <img src="./img/first.jpg" alt="Garden care" class="service__img">
+                        </picture>
                         <div class="service__item-content">
                             <h3 class="service__item-header">Garden care</h3>
                             <span class="service__item-text">Lorem Ipsum has been the industry</span>
                         </div>
                     </li>
-                    <li class="service__item">
-                        <img src="./img/first(1).jpg" alt="Garden care" class="service__img">
+                    <li class="service__item planting">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./img/first(1).jpg">
+                            <source media="(min-width: 381px)" srcset="./img/tablet-first1.jpg">
+                            <img src="./img/first(1).jpg" alt="Garden care" class="service__img">
+                        </picture>
                         <div class="service__item-content">
                             <h3 class="service__item-header">Planting</h3>
                             <span class="service__item-text">Lorem Ipsum has been the industry</span>
                         </div>
                     </li>
-                    <li class="service__item">
-                        <img src="./img/first(2).jpg" alt="Garden care" class="service__img">
+                    <li class="service__item lawn">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./img/first(2).jpg">
+                            <source media="(min-width: 381px)" srcset="./img/tablet-first2.jpg">
+                            <img src="./img/first(2).jpg" alt="Garden care" class="service__img">
+                        </picture>
                         <div class="service__item-content">
                             <h3 class="service__item-header">Lawn care</h3>
                             <span class="service__item-text">Lorem Ipsum has been the industry</span>
                         </div>
                     </li>
-                    <li class="service__item">
-                        <img src="./img/first(3).jpg" alt="Garden care" class="service__img">
+                    <li class="service__item planting">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./img/first(3).jpg">
+                            <source media="(min-width: 381px)" srcset="./img/tablet-first3.jpg">
+                            <img src="./img/first(3).jpg" alt="Garden care" class="service__img">
+                        </picture>
                         <div class="service__item-content">
                             <h3 class="service__item-header">Planting</h3>
                             <span class="service__item-text">Lorem Ipsum has been the industry</span>
                         </div>
                     </li>
-                    <li class="service__item">
-                        <img src="./img/first(4).jpg" alt="Garden care" class="service__img">
+                    <li class="service__item garden">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./img/first(4).jpg">
+                            <source media="(min-width: 381px)" srcset="./img/tablet-first4.jpg">
+                            <img src="./img/first(4).jpg" alt="Garden care" class="service__img">
+                        </picture>
                         <div class="service__item-content">
                             <h3 class="service__item-header">Garden care</h3>
                             <span class="service__item-text">Lorem Ipsum has been the industry</span>
                         </div>
                     </li>
-                    <li class="service__item">
-                        <img src="./img/first(5).jpg" alt="Garden care" class="service__img">
+                    <li class="service__item planting">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./img/first(5).jpg">
+                            <source media="(min-width: 381px)" srcset="./img/tablet-first5.jpg">
+                            <img src="./img/first(5).jpg" alt="Garden care" class="service__img">
+                        </picture>
                         <div class="service__item-content">
                             <h3 class="service__item-header">Planting</h3>
                             <span class="service__item-text">Lorem Ipsum has been the industry</span>
@@ -131,9 +155,9 @@
         </div>
         <div class="background background__light">
             <div class="container">
-                <section class="prices">
+                <section class="prices" id="Price">
                     <div class="prices__content">
-                        <h1 class="prices__header">Prices</h1>
+                        <h2 class="prices__header">Prices</h2>
                         <ul class="prices__list">
                             <li class="prices__item">
                                 <a href="#" class="prices__link">Basics</a>
@@ -161,7 +185,7 @@
             </div>
         </div>
         <div class="container">
-            <section class="contacts">
+            <section class="contacts" id="Contacts">
                 <h2 class="contacts__header">Contact us</h2>
                 <div class="contacts__select-custom">
                     <div class="contacts__select-text">City</div>
@@ -201,6 +225,7 @@
             </div>
         </div>
     </footer>
+    <script src="./main.js"></script>
 </body>
 
 </html>
