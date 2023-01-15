@@ -89,9 +89,9 @@ body {
 .background__light {
     background-color: #FFFFFF;
 }
-.background.header__background {
+/* .background.header__background {
     margin-bottom: 2px;
-}
+} */
 .header {
     display: flex;
     justify-content: space-between;
