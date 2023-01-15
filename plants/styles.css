@@ -67,6 +67,11 @@ body {
     font-weight: 400;
 }
 .call {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Inika';
+    font-weight: 700;
+    font-size: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,7 +79,6 @@ body {
     height: 26px;
     border: 1px solid #E06733;
     border-radius: 5px;
-    font-weight: 400;
     cursor: pointer;
     margin-top: 24px;
 }
@@ -177,7 +181,7 @@ body {
 
 .welcome__header {
     font-family: 'Inter';
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 45px;
     line-height: 50px;
     margin: 7px 0 45px 0;
@@ -189,7 +193,7 @@ body {
 
 .welcome__text {
     font-family: 'Inter';
-    font-weight: 400px;
+    font-weight: 400;
     font-size: 20px;
     line-height: 35px;
     margin-bottom: 46px;
@@ -576,7 +580,7 @@ hr {
 
 .contacts__header {
     font-family: 'Inika';
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 40px;
     color: #499A18;
     text-align: center;
@@ -615,7 +619,7 @@ hr {
     border-radius: 50%;
     right: 35px;
     top: 17px;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 .contacts__select-custom::before {
@@ -889,6 +893,11 @@ hr {
         letter-spacing: 0;
     }
     .call {
+        text-decoration: none;
+        color: #000000;
+        font-family: 'Inika';
+        font-weight: 700;
+        font-size: 10px;
         width: 70px;
         height: 20px;
         margin-top: 10px;
@@ -947,8 +956,13 @@ hr {
         background-color: #717171;
         transform: rotate(-45deg);
     }
-    .navigation__list {
+    .navigation__list,
+    .navigation__list_closed,
+    .navigation__list_opened
+     {
         position: fixed;
+        display: flex;
+        justify-content: flex-start;
         left: 0;
         top: 0;
         z-index: 3;
@@ -957,18 +971,32 @@ hr {
         background-color: #fffffff0;
         flex-direction: column;
         margin: 0;
-        padding: 20px;
+        padding: 30px;
     }
-    .navigation__list_closed {
-        display: none;
+    .navigation__wrapper .navigation__list_closed {
+        /* display: none; */
+        left: -200vw;
+        animation-name: menuClose;
+        animation-duration: 3s;
     }
-    .navigation__list_opened {
+    .navigation__wrapper .navigation__list_opened {
         display: flex;
         justify-content: flex-start;
+        animation-name: menuOpen;
+        animation-duration: 2s;
+    }
+    @keyframes menuOpen {
+        from {left: -100vw;}
+        to {left: 0;}
+    }
+    @keyframes menuClose {
+        from {left: 0;}
+        to {left: -200vw;}
     }
     .navigation__item {
         width: 300px;
-        margin: 15px auto;
+        padding: 10px 0;
+        margin: 5px auto;
     }
 
 

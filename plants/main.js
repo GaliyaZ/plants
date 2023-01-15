@@ -74,11 +74,19 @@ menuBtn.addEventListener('click', () => {
     toggleClasses();
 });
 
+// close menu
+menuList.addEventListener('click', () => {
+    menuBtn.classList.add('navigation__button_closed');
+    menuBtn.classList.remove('navigation__button_opened');
+    menuList.classList.add('navigation__list_closed');
+    menuList.classList.remove('navigation__list_opened');
+})
+
 // menu
 menuItems.forEach(item => {
     item.addEventListener('click', () => {
         toggleClasses();
-    })
+    });
 })
 
 drops.forEach((item, index) => {
@@ -170,4 +178,4 @@ function toggleClasses() {
     menuList.classList.toggle('navigation__list_closed');
     menuList.classList.toggle('navigation__list_opened');
 }
-console.log(80)
+console.log(100)
