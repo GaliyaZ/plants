@@ -105,7 +105,6 @@ serviceBtns.forEach((item, index) => {
         if (secviceActiveLinks.length > 1) {
             serviceBtns.forEach(e => {
                 if (!e.classList.contains('service__button_active')) {
-                    console.log('dis')
                     e.setAttribute('disabled', '')
                 }
             })
@@ -154,14 +153,15 @@ menuLinks.forEach((item, index) => {
 
 function blurAdd(array) {
     array.forEach(item => {
-        item.classList.add('blur')
+        item.classList.add('blur');
+        item.classList.remove('unblur');
     })
 }
 
 function blurRemove(array) {
     array.forEach(item => {
         item.classList.remove('blur');
-        item.classList.add('unblur')
+        item.classList.add('unblur');
     })
 }
 
@@ -179,4 +179,3 @@ function toggleClasses() {
     menuList.classList.toggle('navigation__list_closed');
     menuList.classList.toggle('navigation__list_opened');
 }
-console.log(100)
