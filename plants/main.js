@@ -50,7 +50,7 @@ const vocabulary = {
         Phone: '+1 315	908 0004',
         adress: '14 WEST Noyes BLVD'
     },
-    'New York City': {
+    'Yonkers, NY': {
         Phone: '+1 914	678 0003',
         adress: '511 Warburton Ave'
     }
@@ -161,6 +161,7 @@ function blurAdd(array) {
 function blurRemove(array) {
     array.forEach(item => {
         item.classList.remove('blur');
+        item.classList.add('unblur')
     })
 }
 

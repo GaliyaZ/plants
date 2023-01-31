@@ -29,7 +29,11 @@ body {
 .blur {
     filter: blur(2px);
     animation-name: blur;
-    animation-duration: 2s;
+    animation-duration: 3s;
+}
+.unblur {
+    filter: blur(0);
+    transition: filter 2.5s;
 }
 
 @keyframes blur {
@@ -152,6 +156,7 @@ body {
     cursor: pointer;
     background-color: #E06733;
     color: #ffffff;
+    transition: color 2s, background-color 2s;
 }
 
 .navigation__link_active {
@@ -293,18 +298,19 @@ body {
     border-radius: 5px;
     background-color: transparent;
     margin-right: 38px;
+    transition: color 3s, border 3s;
 }
 .service__button:disabled {
     background-color: #EDF2EC;
-    border-color: #636060;
-    color: #636060;
+    border-color: #7a7a7a;
+    color: #7a7a7a;
 }
 .service__button_active {
     cursor: pointer;
     background-color: #E06733;
     color: #ffffff;
     animation-name: active_btn;
-    animation-duration: 2s;
+    animation-duration: 3s;
 }
 @keyframes active_btn {
     from {
