@@ -144,7 +144,7 @@ async function getWether() {
 }
 
 async function getQuote() {
-    const link = '../assets/data.json';
+    const link = './assets/data.json';
     const res = await fetch(link);
     if (res.ok) {
         const data = await res.json();
@@ -152,7 +152,7 @@ async function getQuote() {
         quoteText.textContent = data[quoteNum].text;
         quoteAuthor.textContent = data[quoteNum].author;
     } else {
-        quoteText.textContent = 'Error! City not found or App not available'
+        quoteText.textContent = 'Error! Quote not found or App not available'
     }
 }
 
