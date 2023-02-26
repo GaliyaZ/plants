@@ -35,8 +35,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 120px;
+  width: 100%;
   margin-bottom: 28px;
+  margin-right: 0;
 }
 
 .play-list {
@@ -283,4 +284,56 @@ body {
     font-size: 32px;
     padding: 5px;
   }
+}
+
+.player {
+  max-width: 160px;
+  box-sizing: border-box;
+}
+
+.progress-container {
+  background: #fff;
+  opacity: 0.8;
+  border-radius: 2px;
+  height: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.progress {
+  background: #000000;
+  opacity: 0.8;
+  border-radius: 2px;
+  height: 5px;
+  width: 0%;
+}
+
+.duration-wrapper {
+  position: relative;
+  top: -20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.track-name {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.lang-active {
+  position: relative;
+}
+
+.lang-item {
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+.lang-active::before {
+  content: "\2713";
+  position: absolute;
+  left: 0px;
+  top: -4px;
+  font-weight: 900;
 }
