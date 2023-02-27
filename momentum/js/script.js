@@ -144,7 +144,7 @@ async function getWether() {
 }
 
 async function getQuote() {
-    const link = './momentum/assets/data.json';
+    const link = './assets/data.json';
     const res = await fetch(link);
     if (res.ok) {
         const data = await res.json();
