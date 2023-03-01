@@ -35,7 +35,7 @@ let lang = document.querySelector('.lang-active').textContent;
 function currentTime() {
     const date = new Date();
     const options = {hour: 'numeric', minute: 'numeric', second: 'numeric'};
-    time.textContent = date.toLocaleTimeString(`${lang == 'en' ? 'en-US' : 'ru-RU'}`, options);
+    time.textContent = date.toLocaleTimeString('ru-RU', options);
     setTimeout(currentTime, 1000);
 }
 
@@ -122,7 +122,7 @@ function getCity() {
 
 async function getWether() {
     const rskey = '83cffe1d50ea4d6a9209e2a596c9b96d';
-    const link = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&lang=en&appid=${rskey}&units=metric`;
+    const link = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&lang=${lang}&appid=${rskey}&units=metric`;
     const res = await fetch(link);
     if (res.ok) {
         weatherError.textContent = '';
@@ -131,14 +131,14 @@ async function getWether() {
         weatherIcon.classList.add(`owf-${data.weather[0].id}`);
         weatherTemperature.textContent = `${Math.floor(data.main.temp)}°C`;
         weatherDescription.textContent = data.weather[0].description;
-        weatherWind.textContent = `Wind: ${Math.floor(data.wind.speed)} m/s`;
-        weatherHumidity.textContent = `Humidity: ${data.main.humidity}%`;
+        weatherWind.textContent = `${lang === 'en' ? 'Wind': 'Ветер'}: ${Math.floor(data.wind.speed)} m/s`;
+        weatherHumidity.textContent = `${lang === 'en' ? 'Humidity': 'Влажность'}: ${data.main.humidity}%`;
     } else {
         if (localStorage.getItem('city')) {
             cityName = localStorage.getItem('city');
             getWether();
         } else {
-            weatherError.textContent = 'Error! City not found or App not available';
+            weatherError.textContent = `${lang === 'en' ? 'Error! City not found or App not available': 'Ошибка! Город не найден или приложение не доступно'}`;
         }
     }
 }
