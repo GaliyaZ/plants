@@ -117,6 +117,9 @@ function getCity() {
     cityName = inputCity.value;
     if (!inputCity.value && localStorage.getItem('city')) {
         cityName = localStorage.getItem('city');
+    } else if (!inputCity.value && !localStorage.getItem('city')) {
+        cityName = `${lang == 'en' ? 'London' : 'Лондон'}`;
+        inputCity.value = cityName;
     }
 }
 
@@ -134,11 +137,16 @@ async function getWether() {
         weatherWind.textContent = `${lang === 'en' ? 'Wind': 'Ветер'}: ${Math.floor(data.wind.speed)} m/s`;
         weatherHumidity.textContent = `${lang === 'en' ? 'Humidity': 'Влажность'}: ${data.main.humidity}%`;
     } else {
-        if (localStorage.getItem('city')) {
-            cityName = localStorage.getItem('city');
+        if (!cityName) {
+            cityName = `${lang == 'en' ? 'London' : 'Лондон'}`;
             getWether();
         } else {
             weatherError.textContent = `${lang === 'en' ? 'Error! City not found or App not available': 'Ошибка! Город не найден или приложение не доступно'}`;
+            weatherIcon.className = 'weather-icon owf';
+        weatherTemperature.textContent = ``;
+        weatherDescription.textContent = '';
+        weatherWind.textContent = ``;
+        weatherHumidity.textContent = ``;
         }
     }
 }
@@ -294,13 +302,19 @@ ruBtn.addEventListener('click', () => {
     enBtn.classList.remove('lang-active');
     ruBtn.classList.add('lang-active');
     lang = 'ru';
-    langChange(lang)
+    langChange(lang);
+    getCity();
+    getWether();
+    inputCity.value = `${lang == 'en' ? 'London' : 'Лондон'}`;
 });
 enBtn.addEventListener('click', () => {
     ruBtn.classList.remove('lang-active');
     enBtn.classList.add('lang-active');
     lang = 'en';
     langChange(lang);
+    getCity();
+    getWether();
+    inputCity.value = `${lang == 'en' ? 'London' : 'Лондон'}`;
 })
 
 
