@@ -137,17 +137,17 @@ async function getWether() {
         weatherWind.textContent = `${lang === 'en' ? 'Wind': 'Ветер'}: ${Math.floor(data.wind.speed)} m/s`;
         weatherHumidity.textContent = `${lang === 'en' ? 'Humidity': 'Влажность'}: ${data.main.humidity}%`;
     } else {
-        if (!cityName) {
-            cityName = `${lang == 'en' ? 'London' : 'Лондон'}`;
-            getWether();
-        } else {
+        // if (!cityName) {
+        //     cityName = `${lang == 'en' ? 'London' : 'Лондон'}`;
+        //     getWether();
+        // } else {
             weatherError.textContent = `${lang === 'en' ? 'Error! City not found or App not available': 'Ошибка! Город не найден или приложение не доступно'}`;
             weatherIcon.className = 'weather-icon owf';
         weatherTemperature.textContent = ``;
         weatherDescription.textContent = '';
         weatherWind.textContent = ``;
         weatherHumidity.textContent = ``;
-        }
+        // }
     }
 }
 
