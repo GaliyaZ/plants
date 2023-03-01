@@ -131,7 +131,7 @@ async function getWether() {
         weatherIcon.classList.add(`owf-${data.weather[0].id}`);
         weatherTemperature.textContent = `${data.main.temp}°C`;
         weatherDescription.textContent = data.weather[0].description;
-        weatherWind.textContent = `Wind: ${data.wind.speed} m/s`;
+        weatherWind.textContent = `Wind: ${Math.floor(data.wind.speed)} m/s`;
         weatherHumidity.textContent = `Humidity: ${data.main.humidity}%`;
     } else {
         if (localStorage.getItem('city')) {
